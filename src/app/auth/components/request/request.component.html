@@ -1,0 +1,21 @@
+<form [formGroup]="formGroup" class="w-full h-full  flex flex-col gap-4 ">
+    <div class="flex flex-col items-center gap-4">
+        <img src="./images/logo.svg" alt="">
+        <div class="flex flex-col gap-2">
+            <h2 class="text-center text-neutral-950 text-preset-1">Forgotten your password?</h2>
+            <p class="text-center text-preset-5 text-neutral-600">Enter your email below, and we’ll send you a link to
+                reset it.</p>
+        </div>
+    </div>
+    <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-[6px] form-group">
+            <label for="email">Email Address</label>
+            <input id="email" type="text" placeholder="email@example.com" formControlName="email">
+        </div>
+        <button type="submit" class="btn btn-submit" (click)="request()">Send Reset
+            Link</button>
+        <!-- <p class="text-center text-neutral-600 text-preset-5">
+            No account yet <a routerLink="/auth/register" class="text-neutral-950">? Sign Up</a>
+        </p> -->
+    </div>
+</form>

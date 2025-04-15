@@ -1,0 +1,30 @@
+.container {
+    min-height: 100vh;
+    padding: 24px;
+
+}
+
+.baniere {
+    min-height: 100%;
+    width: 368px;
+    background-image: url('../../assets/img/auth-bg-circle.png'), url('../../assets/img/auth-bg.png');
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+    background-position: left bottom, center;
+    border-radius: 12px;
+    overflow: hidden;
+
+    padding: 40px 24px;
+
+    .title {
+        font-size: 14px;
+        font-family: 'Inter SemiBold';
+        color: #fff;
+    }
+
+    .description {
+        font-size: 12px;
+        font-family: "Inter Light";
+        color: #fff;
+    }
+}

@@ -1,0 +1,43 @@
+<form [formGroup]="formGroup" class="w-full h-full  flex flex-col gap-4 ">
+    <div class="flex flex-col items-center gap-4">
+        <img src="./images/logo.svg" alt="">
+        <div class="flex flex-col gap-2">
+            <h2 class="text-center text-neutral-950 text-preset-1">Reset Your Password</h2>
+            <p class="text-center text-preset-5 text-neutral-600">Choose a new password to secure your account.</p>
+        </div>
+    </div>
+    <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-[6px] form-group">
+            <label for="newPassword">New Password</label>
+            <div class="relative flex items-center justify-end">
+                <input id="newPassword" formControlName="newPassword" [type]="showPassword?'text':'password'">
+                <button type="button" class="absolute flex items-center justify-center right-4"
+                    (click)="showPassword=!showPassword">
+                    <mat-icon
+                        class="flex items-center justify-center text-neutral-500">{{showPassword?'visibility_off':'visibility'}}</mat-icon>
+                </button>
+            </div>
+            <p class="flex items-center gap-2">
+                <mat-icon class="flex justify-center items-center  text-neutral-600">info</mat-icon>
+                <span class="text-neutral-600 text-preset-6">At least 8 characters</span>
+            </p>
+        </div>
+        <div class="flex flex-col gap-[6px] form-group">
+            <label for="confirmPassword">Confirm New Password</label>
+            <div class="relative flex items-center justify-end">
+                <input id="confirmPassword" [type]="showConirmPassword?'text':'password'"
+                    formControlName="confirmNewPassword">
+                <button type="button" class="absolute flex items-center justify-center right-4"
+                    (click)="showConirmPassword=!showConirmPassword">
+                    <mat-icon
+                        class="flex items-center justify-center text-neutral-500">{{showConirmPassword?'visibility_off':'visibility'}}</mat-icon>
+                </button>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-submit" (click)="reset()" [disabled]="formGroup.invalid">Reset
+            Password</button>
+        <!-- <p class="text-center text-neutral-600 text-preset-5">
+            No account yet <a routerLink="/auth/register" class="text-neutral-950">? Sign Up</a>
+        </p> -->
+    </div>
+</form>
