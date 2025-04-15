@@ -15,7 +15,7 @@ export enum AuthConstant {
 })
 export class AuthService {
   private apiUrlAuth =
-    'https://note-taking-web-app-backend-6hnw.onrender.com/api/auth';
+    'https://note-taking-web-app-backend-txde.onrender.com/api/auth';
 
   private userSubject!: BehaviorSubject<any>;
   private currentUser!: Observable<any>;
